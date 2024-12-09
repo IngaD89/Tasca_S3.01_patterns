@@ -1,28 +1,27 @@
-package org.example.nivell2.abst_factory;
+package org.example.nivell2.models;
 
-public class AddressRecord extends Record{
+public class Address {
     private String street;
     private String streetNum;
     private String floor;
     private String door;
-    private String zipcode;
+    private String zipCode;
+    private Country country;
 
-
-    public AddressRecord(
-            RecordType type,
-            Country country,
+    public Address(
             String street,
             String streetNum,
             String floor,
             String door,
-            String zipcode
+            String zipCode,
+            Country country
     ) {
-        super(type, country);
         this.street = street;
         this.streetNum = streetNum;
         this.floor = floor;
         this.door = door;
-        this.zipcode = zipcode;
+        this.zipCode = zipCode;
+        this.country = country;
     }
 
     public String getStreet() {
@@ -57,16 +56,31 @@ public class AddressRecord extends Record{
         this.door = door;
     }
 
-    public String getZipcode() {
-        return zipcode;
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public Country getCountry() {
+        return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
 
     @Override
-    void create() {
-        new AddressRecord(super.getType(), super.getCountry(), street, streetNum, floor, door, zipcode);
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", streetNum='" + streetNum + '\'' +
+                ", floor='" + floor + '\'' +
+                ", door='" + door + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", country=" + country +
+                '}';
     }
 }
