@@ -1,19 +1,18 @@
 package org.example.nivell2.abst_factory_2;
 
-import org.example.nivell2.abstract_objs.abst_impl.GermanyContactInfoImpl;
-import org.example.nivell2.abstract_objs.abst_impl.SpainContactInfoImpl;
+import org.example.nivell2.abstract_objs.ContactInfo;
+import org.example.nivell2.abstract_objs.ContactInfoFactory;
+import org.example.nivell2.models.Country;
 
 public class Main {
     public static void main(String[] args) {
 
-        SpainContactInfoImpl spain = new SpainContactInfoImpl();
-        spain.creteContactInfo();
+        ContactInfoFactory spainFactory = ContactInfoFactoryProvider.getFactory(Country.SPAIN);
+        ContactInfo spainContactInfo = spainFactory.createContactInfo();
+        System.out.println(spainContactInfo);
 
-        System.out.println(spain);
-
-        GermanyContactInfoImpl germany = new GermanyContactInfoImpl();
-        germany.creteContactInfo();
-
-        System.out.println(germany);
+        ContactInfoFactory germanyFactory = ContactInfoFactoryProvider.getFactory(Country.GERMANY);
+        ContactInfo germanyContactInfo = germanyFactory.createContactInfo();
+        System.out.println(germanyContactInfo);
     }
 }

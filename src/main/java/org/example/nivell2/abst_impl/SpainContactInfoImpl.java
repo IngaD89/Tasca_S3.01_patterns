@@ -1,4 +1,4 @@
-package org.example.nivell2.abstract_objs.abst_impl;
+package org.example.nivell2.abst_impl;
 
 import org.example.nivell2.abstract_objs.ContactInfo;
 import org.example.nivell2.abstract_objs.ContactInfoFactory;
@@ -17,7 +17,7 @@ public class SpainContactInfoImpl implements ContactInfoFactory {
     String zipCode = "08004";
 
     @Override
-    public ContactInfo creteContactInfo() {
+    public ContactInfo createContactInfo() {
         return new ContactInfo(
                 new Phone(PREFIX, phoneNumber, Country.SPAIN),
                 new Address(street, streetNum, floor, door, zipCode, Country.SPAIN)
@@ -27,7 +27,7 @@ public class SpainContactInfoImpl implements ContactInfoFactory {
     @Override
     public String toString() {
         return "SpainContactInfoImpl{" +
-                 this.creteContactInfo() + '\'' +
+                 this.createContactInfo() + '\'' +
                 '}';
     }
 }
