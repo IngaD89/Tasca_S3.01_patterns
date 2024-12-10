@@ -1,8 +1,8 @@
-package org.example.nivell2.abst_factory_2;
+package org.example.nivell2.abst_factory;
 
-import org.example.nivell2.abstract_objs.ContactInfo;
-import org.example.nivell2.abstract_objs.ContactInfoFactory;
-import org.example.nivell2.models.Country;
+import org.example.nivell2.abst_factory.abstract_objs.ContactInfo;
+import org.example.nivell2.abst_factory.abstract_objs.ContactInfoFactory;
+import org.example.nivell2.abst_factory.models.Country;
 
 public class Main {
     public static void main(String[] args) {

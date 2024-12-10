@@ -1,10 +1,10 @@
-package org.example.nivell2.abst_impl;
+package org.example.nivell2.abst_factory.abst_impl;
 
-import org.example.nivell2.abstract_objs.ContactInfo;
-import org.example.nivell2.abstract_objs.ContactInfoFactory;
-import org.example.nivell2.models.Address;
-import org.example.nivell2.models.Country;
-import org.example.nivell2.models.Phone;
+import org.example.nivell2.abst_factory.abstract_objs.ContactInfo;
+import org.example.nivell2.abst_factory.models.Phone;
+import org.example.nivell2.abst_factory.abstract_objs.ContactInfoFactory;
+import org.example.nivell2.abst_factory.models.Address;
+import org.example.nivell2.abst_factory.models.Country;
 
 public class GermanyContactInfoImpl implements ContactInfoFactory {
 

@@ -1,4 +1,4 @@
-package org.example.nivell2.models;
+package org.example.nivell2.abst_factory.models;
 
 public class Address {
     private String street;
